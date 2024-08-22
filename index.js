@@ -25,7 +25,7 @@ app.all("*", (req, res, next) => {
 
 app.use(golbalmiddlware);
 
-app.listen(3000 || process.env.PORT, () =>
+app.listen(process.env.PORT, () =>
   console.log(`Example app listening on port ${port}!`)
 );
 process.on("unhandledRejection", (err) => {
