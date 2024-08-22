@@ -14,6 +14,7 @@ app.use(express.static("uploads"));
 app.use(express.json());
 const port = process.env.PORT || 3000;
 conct();
+app.get("/", (req, res) => res.send("Hello World!"));
 app_use(app);
 app.all("*", (req, res, next) => {
   next(new Apperr("not found the url", 404));
@@ -21,7 +22,6 @@ app.all("*", (req, res, next) => {
 
 app.use(golbalmiddlware);
 
-app.get("/", (req, res) => res.send("Hello World!"));
 app.listen(3000 || process.env.PORT, () =>
   console.log(`Example app listening on port ${port}!`)
 );
