@@ -15,6 +15,7 @@ app.use(express.json());
 const port = process.env.PORT || 3000;
 conct();
 app.get("/", (req, res) => res.send("Hello World!"));
+app.get("/test", (req, res) => res.send("tesst secc"));
 app_use(app);
 app.all("*", (req, res, next) => {
   next(new Apperr("not found the url", 404));
