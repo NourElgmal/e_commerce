@@ -3,6 +3,7 @@ process.on("uncaughtException", (err) => {
 });
 const express = require("express");
 const conct = require("./database/conct");
+const cors = require("cors");
 require("dotenv").config({ path: "./config/.env" });
 const morgan = require("morgan");
 const Apperr = require("./utils/Apperr");
@@ -10,6 +11,7 @@ const { golbalmiddlware } = require("./utils/golbalmiddlewareErr");
 const { app_use } = require("./utils/app_use");
 const app = express();
 app.use(morgan("dev"));
+app.use(cors());
 app.use(express.static("uploads"));
 app.use(express.json());
 const port = process.env.PORT || 3000;
