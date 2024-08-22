@@ -1,5 +1,5 @@
 exports.app_use = (app) => {
-  //app.use("/category", require("../src/category/api.category"));
+  app.use("/category", require("../src/category/api.category"));
   app.use("/subcategory", require("../src/subcategory/subcategory.api"));
   app.use("/brand", require("../src/brand/brand.api"));
   app.use("/product", require("../src/product/product.api"));
