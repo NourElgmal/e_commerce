@@ -22,7 +22,9 @@ app.all("*", (req, res, next) => {
 app.use(golbalmiddlware);
 
 app.get("/", (req, res) => res.send("Hello World!"));
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(3000 || process.env.PORT, () =>
+  console.log(`Example app listening on port ${port}!`)
+);
 process.on("unhandledRejection", (err) => {
   console.log("unhandledRejection", err);
 });
